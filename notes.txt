@@ -1,0 +1,21 @@
+One to One:
+    - User -> Profile
+
+One to Many:
+    - User -> Posts
+
+Many to Many: (BelongsToMany inside each model)
+    - Posts -> Tags 
+    - Tags -> Posts
+
+Has Many Through: (We wanna fetch Posts, taking some Affiliation)
+    - Affiliation -> User -> Posts
+
+Polymorphic relations: (Video can be watchable from a Series or Collection)
+    - Video (morphTo) -> Series (morphMany instead of hasMany)
+    - Video (morphTo) -> Collection (morphMany instead of hasMany)
+
+Many to Many Polymorphic:
+    - Likes -> Posts (are many to many)
+    - Likes -> Comments (are also many to many)
+    - Likes -> Videos (are also many to many, and so on)
